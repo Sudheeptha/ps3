@@ -71,3 +71,65 @@
   • Report Generation: JSON-based analytics pipeline
   • Development Environment: VS Code / IntelliJ IDEA
 ```
+
+Installation & Execution
+Follow the steps below to run the project locally.
+1. Clone the repository and navigate into the project directory.
+
+2. Create a Python virtual environment:
+   
+   Windows:
+   python -m venv venv
+
+   Linux / Mac:
+   python3 -m venv venv
+
+3. Activate the virtual environment:
+   
+   Windows:
+   venv\\Scripts\\activate
+
+   Linux / Mac:
+   source venv/bin/activate
+
+4. Install all required dependencies:
+   
+   pip install -r requirements.txt
+
+5. Configure environment variables:
+   
+   Create a .env file in the root project directory and add:
+   
+   GEMINI_API_KEY=your_api_key_here
+
+6. Place datasets inside the data/ directory:
+   
+   • equity.csv
+   • macro.csv
+   • oil.csv
+   • multiasset.csv
+
+7. Run the main quantitative trading pipeline:
+   
+   python main.py
+
+   This generates:
+   • output/report.json
+   • output/ai_analysis.txt
+
+8. Launch the Streamlit dashboard frontend:
+   
+   streamlit run app.py
+
+9. Open the dashboard in browser:
+   
+   http://localhost:8501
+
+10. The dashboard provides:
+   
+   • Portfolio performance analytics
+   • NAV progression
+   • Risk metrics visualization
+   • Trade execution logs
+   • Signal analysis
+   • AI-generated portfolio interpretation
